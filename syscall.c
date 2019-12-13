@@ -103,7 +103,10 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
+
+// My project
 extern int sys_getppid(void);
+extern int sys_getChildren(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -127,7 +130,10 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+
+// My project
 [SYS_getppid] sys_getppid,
+[SYS_getChildren] sys_getChildren,
 };
 
 void

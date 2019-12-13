@@ -90,9 +90,19 @@ sys_uptime(void)
   return xticks;
 }
 
+// My project
+
 // return parent process id (ppid)
 int
 sys_getppid(void)
 {
   return myproc()->parent->pid;
+}
+
+int
+sys_getChildren(void)
+{
+  int pid;
+  argptr(0, (void*) &pid, sizeof(pid));
+  return getChildrenFunc(pid);
 }

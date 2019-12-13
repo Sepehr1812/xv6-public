@@ -121,6 +121,9 @@ int             wait(void);
 void            wakeup(void*);
 void            yield(void);
 
+// My project
+int             getChildrenFunc(int);
+
 // swtch.S
 void            swtch(struct context**, struct context*);
 

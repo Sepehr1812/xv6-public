@@ -532,3 +532,26 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+// My project
+int
+getChildrenFunc(int pid)
+{
+  struct proc *p;
+  int res = 0;
+  acquire(&ptable.lock);
+  for (p = ptable.proc; p < &ptable.proc[NPROC]; p++) {
+    if (p->parent->pid == pid) {
+      if (p->pid < 10) {
+        res *= 10;
+        res += p->pid;
+      } else
+      {
+        res *= 100;
+        res += p->pid;
+      }
+    }
+  }
+  release(&ptable.lock);
+  return res;
+}
