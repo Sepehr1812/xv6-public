@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
 {
     fork();
     fork();
-    wait();
+    // wait();
     printf(1, "PID: %d, PPID: %d, getChildren: %d\n", getpid(), getppid(), getChildren(getppid()));
     wait();
 
