@@ -151,6 +151,12 @@ userinit(void)
   p->state = RUNNABLE;
 
   release(&ptable.lock);
+
+  // My project
+  // Initializing sys_count
+  int i;
+  for (i = 0; i < MAX_SYS_CALLS; i++)
+    p->sys_count[i] = 0;
 }
 
 // Grow current process's memory by n bytes.

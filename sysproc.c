@@ -106,3 +106,11 @@ sys_getChildren(void)
   argptr(0, (void*) &pid, sizeof(pid));
   return getChildrenFunc(pid);
 }
+
+int
+sys_getCount(void)
+{
+  int scn;
+  argptr(0, (void*) &scn, sizeof(scn));
+  return myproc()->sys_count[scn];
+}

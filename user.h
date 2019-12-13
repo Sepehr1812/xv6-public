@@ -27,6 +27,7 @@ int uptime(void);
 // My project
 int getppid(void);
 int getChildren(int);
+int getCount(int);
 
 // ulib.c
 int stat(const char*, struct stat*);
