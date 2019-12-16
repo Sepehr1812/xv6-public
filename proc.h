@@ -53,6 +53,8 @@ struct proc {
 
   // My project
   int sys_count[MAX_SYS_CALLS];
+  int priority;
+  unsigned long long calculatedPriority;
 };
 
 // Process memory is laid out contiguously, low addresses first:

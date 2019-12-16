@@ -123,6 +123,7 @@ void            yield(void);
 
 // My project
 int             getChildrenFunc(int);
+int             whichAlgo;
 
 // swtch.S
 void            swtch(struct context**, struct context*);
