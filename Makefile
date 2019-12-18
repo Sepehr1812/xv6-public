@@ -184,6 +184,7 @@ UPROGS=\
 	_sep\
 	_getChildrenTest\
 	_getCountTest\
+	_testPolicy\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)

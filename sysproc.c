@@ -114,3 +114,27 @@ sys_getCount(void)
   argptr(0, (void*) &scn, sizeof(scn));
   return myproc()->sys_count[scn];
 }
+
+int
+sys_changePriority(void)
+{
+  int p;
+  argptr(0, (void*) &p, sizeof(p));
+  myproc()->priority = p;
+
+  if (myproc()->priority == p)
+    return 1;
+  return -1;
+}
+
+int
+sys_changePolicy(void)
+{
+  int a;
+  argptr(0, (void*) &a, sizeof(a));
+  whichAlgo = a;
+  cprintf("hello! %d\n", whichAlgo);
+  if (whichAlgo == a)
+    return 1;
+  return -1;
+}

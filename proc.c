@@ -130,6 +130,12 @@ found:
   memset(p->context, 0, sizeof *p->context);
   p->context->eip = (uint)forkret;
 
+  // My project
+  // Initializing sys_count
+  int i;
+  for (i = 0; i < MAX_SYS_CALLS; i++)
+    p->sys_count[i] = 0;
+
   return p;
 }
 
@@ -169,12 +175,6 @@ userinit(void)
   p->state = RUNNABLE;
 
   release(&ptable.lock);
-
-  // My project
-  // Initializing sys_count
-  int i;
-  for (i = 0; i < MAX_SYS_CALLS; i++)
-    p->sys_count[i] = 0;
 }
 
 // Grow current process's memory by n bytes.
@@ -362,7 +362,8 @@ scheduler(void)
     // Enable interrupts on this processor.
     sti();
 
-    if (whichAlgo == 0 || whichAlgo == 1) { // My project ; without priority
+    if (whichAlgo == 0 || whichAlgo == 1) // My project ; without priority
+    {
       // Loop over process table looking for process to run.
       acquire(&ptable.lock);
       for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
@@ -386,9 +387,8 @@ scheduler(void)
       release(&ptable.lock);
     } else // My project ; within priority
     {
-
       struct proc *highP = NULL;
-
+      
       // Loop over process table looking for process to run.
       acquire(&ptable.lock);
       for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
@@ -410,6 +410,7 @@ scheduler(void)
             highP = p1;
         }
         
+        p->calculatedPriority += p->priority;
         if (highP != p) {
           p = highP;
           c->proc = p;
@@ -427,6 +428,13 @@ scheduler(void)
       release(&ptable.lock);
     }
   }
+}
+
+// My project
+void
+set_whichAlgo(int a)
+{
+  whichAlgo = a;
 }
 
 // Enter scheduler.  Must hold only ptable.lock
