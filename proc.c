@@ -345,7 +345,7 @@ wait(void)
 //      via swtch back to the scheduler.
 
 // My project
-int whichAlgo = 0;
+int whichAlgo = 0; // Initial algorithm
 #define NULL 0
 
 void
@@ -395,13 +395,9 @@ scheduler(void)
         if(p->state != RUNNABLE)
           continue;
 
-        // Switch to chosen process.  It is the process's job
-        // to release ptable.lock and then reacquire it
-        // before jumping back to us.
-
         // finding the most priority
         highP = p;
-        for (p1 = ptable.proc; p < &ptable.proc[NPROC]; p1++)
+        for (p1 = ptable.proc; p1 < &ptable.proc[NPROC]; p1++)
         {
           if (p1->state != RUNNABLE)
             continue;
@@ -410,8 +406,16 @@ scheduler(void)
             highP = p1;
         }
         
+        // Change calculatedPriority of the RUNNING program.
         p->calculatedPriority += p->priority;
-        if (highP != p) {
+
+        // Switch to chosen process.  It is the process's job
+        // to release ptable.lock and then reacquire it
+        // before jumping back to us.
+
+        // Second condition is for the first try of the program when its state is not RUNNING.
+        if (highP->state != RUNNING || p->calculatedPriority == 5)
+        {
           p = highP;
           c->proc = p;
           switchuvm(p);
@@ -428,13 +432,6 @@ scheduler(void)
       release(&ptable.lock);
     }
   }
-}
-
-// My project
-void
-set_whichAlgo(int a)
-{
-  whichAlgo = a;
 }
 
 // Enter scheduler.  Must hold only ptable.lock
