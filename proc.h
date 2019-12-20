@@ -57,6 +57,20 @@ struct proc {
   int sys_count[MAX_SYS_CALLS];
   int priority;
   unsigned long long calculatedPriority;
+  uint creationTime;
+  uint terminationTime;
+  uint sleepingTime;
+  uint readyTime;
+  uint runningTime;
+};
+
+// My project
+struct timeVariables {
+  uint creationTime;
+  uint terminationTime;
+  uint sleepingTime;
+  uint readyTime;
+  uint runningTime;
 };
 
 // Process memory is laid out contiguously, low addresses first:

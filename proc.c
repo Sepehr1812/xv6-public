@@ -136,6 +136,12 @@ found:
   for (i = 0; i < MAX_SYS_CALLS; i++)
     p->sys_count[i] = 0;
 
+  p->creationTime = ticks;
+  p->terminationTime = 0;
+  p->sleepingTime = 0;
+  p->readyTime = 0;
+  p->runningTime = 0;
+
   return p;
 }
 
@@ -287,6 +293,10 @@ exit(void)
 
   // Jump into the scheduler, never to return.
   curproc->state = ZOMBIE;
+
+  // My project
+  curproc->terminationTime = ticks;
+
   sched();
   panic("zombie exit");
 }
@@ -333,6 +343,20 @@ wait(void)
     // Wait for children to exit.  (See wakeup1 call in proc_exit.)
     sleep(curproc, &ptable.lock);  //DOC: wait-sleep
   }
+}
+
+// My project
+int
+waitForChild(struct timeVariables *times)
+{
+  // struct proc *curproc = myproc();
+  myproc()->creationTime = times->creationTime;
+  myproc()->terminationTime = times->terminationTime;
+  myproc()->runningTime = times->runningTime;
+  myproc()->sleepingTime = times->sleepingTime;
+  myproc()->readyTime = times->readyTime;
+
+  return wait();
 }
 
 //PAGEBREAK: 42
@@ -414,7 +438,7 @@ scheduler(void)
         // before jumping back to us.
 
         // Second condition is for the first try of the program when its state is not RUNNING.
-        if (highP->state != RUNNING || p->calculatedPriority == 5)
+        if (highP->state != RUNNING)
         {
           p = highP;
           c->proc = p;
@@ -633,4 +657,22 @@ getChildrenFunc(int pid)
   }
   release(&ptable.lock);
   return res;
+}
+
+// My project
+void
+updateTimes()
+{
+  struct proc *p;
+  acquire(&ptable.lock);
+  for (p = ptable.proc; p < &ptable.proc[NPROC]; p++)
+  {
+    if (p->state == RUNNING)
+      p->runningTime++;
+    else if (p->state == RUNNABLE)
+      p->readyTime++;
+    else if (p->state == SLEEPING)
+      p->sleepingTime++;
+  }
+  release(&ptable.lock);
 }

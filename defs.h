@@ -10,6 +10,9 @@ struct sleeplock;
 struct stat;
 struct superblock;
 
+// My project
+struct timeVariables;
+
 // bio.c
 void            binit(void);
 struct buf*     bread(uint, uint);
@@ -124,6 +127,8 @@ void            yield(void);
 // My project
 int             getChildrenFunc(int);
 int             whichAlgo;
+void            updateTimes();
+int             waitForChild(struct timeVariables*);
 
 // swtch.S
 void            swtch(struct context**, struct context*);

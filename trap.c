@@ -51,6 +51,10 @@ trap(struct trapframe *tf)
     if(cpuid() == 0){
       acquire(&tickslock);
       ticks++;
+
+      // My project
+      updateTimes();
+
       wakeup(&ticks);
       release(&tickslock);
     }

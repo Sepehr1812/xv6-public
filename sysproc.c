@@ -133,8 +133,21 @@ sys_changePolicy(void)
   int a;
   argptr(0, (void*) &a, sizeof(a));
   whichAlgo = a;
-  cprintf("hello! %d\n", whichAlgo);
+  // cprintf("algo: %d\n", whichAlgo); // for test
   if (whichAlgo == a)
     return 1;
   return -1;
+}
+
+int sys_waitForChild(void)
+{
+  struct timeVariables* t;
+  argptr(0, (void*) &t, sizeof(t));
+
+  // int r = waitForChild(t);
+  // cprintf("times in order: %d, %d, %d, %d, %d\n", myproc()->creationTime, myproc()->terminationTime,
+  //             myproc()->readyTime, myproc()->runningTime, myproc()->sleepingTime); // for test
+  
+  // return r;
+  return waitForChild(t);
 }

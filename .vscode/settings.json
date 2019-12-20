@@ -4,6 +4,8 @@
         "mmu.h": "c",
         "x86.h": "c",
         "memlayout.h": "c",
-        "param.h": "c"
+        "param.h": "c",
+        "proc.h": "c",
+        "types.h": "c"
     }
 }
