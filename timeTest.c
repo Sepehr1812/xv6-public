@@ -11,13 +11,10 @@ struct timeVariables {
 
 int main(int argc, char const *argv[])
 {
-    times.creationTime = 2;
-    times.terminationTime = 20000;
-    times.readyTime = 15;
-    times.runningTime = 20;
-    times.sleepingTime = 10;
-
+    fork();
     waitForChild(&times);
+    printf(1, "times in order: %d, %d, %d, %d, %d\n", times.creationTime, times.terminationTime,
+              times.readyTime, times.runningTime, times.sleepingTime);
 
     exit();
 }

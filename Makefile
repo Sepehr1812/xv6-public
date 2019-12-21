@@ -185,6 +185,8 @@ UPROGS=\
 	_getCountTest\
 	_policyTest\
 	_timeTest\
+	_OriginalSchedTest\
+	_PrioritySchedTest\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
