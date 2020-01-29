@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="xv6_public"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/sepehr/Mine/xv6-public/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/sepehr/Mine/xv6-public/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="xv6_public">
+				<Option output="/home/sepehr/Mine/xv6-public/cmake-build-debug/xv6_public" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sepehr/Mine/xv6-public/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sepehr/Mine/xv6-public/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 xv6_public"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="xv6_public/fast">
+				<Option output="/home/sepehr/Mine/xv6-public/cmake-build-debug/xv6_public" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sepehr/Mine/xv6-public/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sepehr/Mine/xv6-public/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 xv6_public/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/sepehr/Mine/xv6-public/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/sepehr/Mine/xv6-public/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/sepehr/Mine/xv6-public/OriginalSchedTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/PrioritySchedTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/asm.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/bio.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/bootmain.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/buf.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/cat.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/console.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/date.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/defs.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/echo.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/elf.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/exec.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/fcntl.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/file.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/file.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/forktest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/fs.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/fs.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/getChildrenTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/getCountTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/grep.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ide.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/init.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ioapic.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/kalloc.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/kbd.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/kbd.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/kill.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/lapic.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ln.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/log.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ls.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/main.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/memide.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/memlayout.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/mkdir.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/mkfs.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/mmu.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/mp.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/mp.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/param.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/picirq.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/pipe.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/policyTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/printf.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/proc.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/proc.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/rm.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/sh.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/sleeplock.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/sleeplock.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/spinlock.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/spinlock.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/stat.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/stressfs.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/string.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/syscall.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/syscall.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/sysfile.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/sysproc.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/timeTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/trap.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/traps.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/types.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/uart.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ulib.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/umalloc.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/user.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/usertests.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/vm.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/wc.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/x86.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/zombie.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

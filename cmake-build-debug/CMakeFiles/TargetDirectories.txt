@@ -1,0 +1,3 @@
+/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir
+/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/edit_cache.dir
