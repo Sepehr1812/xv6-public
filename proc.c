@@ -493,6 +493,7 @@ scheduler(void)
     }
   }
 }
+#pragma clang diagnostic pop
 
 // Enter scheduler.  Must hold only ptable.lock
 // and have changed proc->state. Saves and restores
