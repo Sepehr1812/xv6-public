@@ -18,5 +18,6 @@ number of times the referenced system call was invoked by the calling process.
 Struct fields have been added to each process.
 
 
+! Numbers in my commit notes are numbers of questions in the project description.
 !! my changes to source codes are below ```// My project``` lines.
 !!! You can find the source code here: https://github.com/mit-pdos/xv6-public
