@@ -146,3 +146,29 @@ int sys_waitForChild(void)
   int r = waitForChild(t);
   return r;
 }
+
+void
+sys_ticketlockInit(void)
+{
+    init_tlock();
+}
+
+int
+sys_ticketlockTest(void)
+{
+    return inc_sh_mem();
+}
+
+void
+sys_rwinit(void)
+{
+
+}
+
+int
+sys_rwtest(void)
+{
+    int is_write;
+    argint(0, (void*) &is_write);
+
+}

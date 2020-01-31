@@ -47,6 +47,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/sepehr/Mine/xv6-public/syscall.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/syscall.c.o"
   "/home/sepehr/Mine/xv6-public/sysfile.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/sysfile.c.o"
   "/home/sepehr/Mine/xv6-public/sysproc.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/sysproc.c.o"
+  "/home/sepehr/Mine/xv6-public/ticketlock.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/ticketlock.c.o"
+  "/home/sepehr/Mine/xv6-public/ticketlockTest.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/ticketlockTest.c.o"
   "/home/sepehr/Mine/xv6-public/timeTest.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/timeTest.c.o"
   "/home/sepehr/Mine/xv6-public/trap.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/trap.c.o"
   "/home/sepehr/Mine/xv6-public/uart.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/uart.c.o"

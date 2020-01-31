@@ -1284,6 +1284,60 @@ sysproc.c.s:
 	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/sysproc.c.s
 .PHONY : sysproc.c.s
 
+ticketlock.o: ticketlock.c.o
+
+.PHONY : ticketlock.o
+
+# target to build an object file
+ticketlock.c.o:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/ticketlock.c.o
+.PHONY : ticketlock.c.o
+
+ticketlock.i: ticketlock.c.i
+
+.PHONY : ticketlock.i
+
+# target to preprocess a source file
+ticketlock.c.i:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/ticketlock.c.i
+.PHONY : ticketlock.c.i
+
+ticketlock.s: ticketlock.c.s
+
+.PHONY : ticketlock.s
+
+# target to generate assembly for a file
+ticketlock.c.s:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/ticketlock.c.s
+.PHONY : ticketlock.c.s
+
+ticketlockTest.o: ticketlockTest.c.o
+
+.PHONY : ticketlockTest.o
+
+# target to build an object file
+ticketlockTest.c.o:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/ticketlockTest.c.o
+.PHONY : ticketlockTest.c.o
+
+ticketlockTest.i: ticketlockTest.c.i
+
+.PHONY : ticketlockTest.i
+
+# target to preprocess a source file
+ticketlockTest.c.i:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/ticketlockTest.c.i
+.PHONY : ticketlockTest.c.i
+
+ticketlockTest.s: ticketlockTest.c.s
+
+.PHONY : ticketlockTest.s
+
+# target to generate assembly for a file
+ticketlockTest.c.s:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/ticketlockTest.c.s
+.PHONY : ticketlockTest.c.s
+
 timeTest.o: timeTest.c.o
 
 .PHONY : timeTest.o
@@ -1665,6 +1719,12 @@ help:
 	@echo "... sysproc.o"
 	@echo "... sysproc.i"
 	@echo "... sysproc.s"
+	@echo "... ticketlock.o"
+	@echo "... ticketlock.i"
+	@echo "... ticketlock.s"
+	@echo "... ticketlockTest.o"
+	@echo "... ticketlockTest.i"
+	@echo "... ticketlockTest.s"
 	@echo "... timeTest.o"
 	@echo "... timeTest.i"
 	@echo "... timeTest.s"

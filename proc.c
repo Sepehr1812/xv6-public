@@ -7,7 +7,8 @@
 #include "proc.h"
 #include "spinlock.h"
 
-// Myu project
+// My project
+#include "ticketlock.h"
 #define MAX_ULL_VALUE 18446744073709551
 
 struct {
@@ -408,6 +409,8 @@ waitForChild(struct timeVariables *times)
 int whichAlgo = 0; // Initial algorithm
 #define NULL 0
 
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wmissing-noreturn"
 void
 scheduler(void)
 {
@@ -493,7 +496,8 @@ scheduler(void)
     }
   }
 }
-#pragma clang diagnostic pop
+//#pragma clang diagnostic pop
+//#pragma clang diagnostic pop
 
 // Enter scheduler.  Must hold only ptable.lock
 // and have changed proc->state. Saves and restores
@@ -712,4 +716,39 @@ updateTimes()
       p->sleepingTime++;
   }
   release(&ptable.lock);
+}
+
+// My project
+// struct for table of processes will create to test ticket lock.
+struct {
+    struct ticketlock tlk;
+    struct proc proc[NPROC];
+} t_ptable;
+
+// the shared memory we created for testing ticket lock.
+int sh_mem;
+
+void
+init_tlock(void)
+{
+    t_initlock(&t_ptable.tlk, "t_ptable");
+    sh_mem = 0; // initializing the shared memory
+}
+
+int
+inc_sh_mem(void)
+{
+    t_acquire(&t_ptable.tlk);
+    cprintf("shared memory before incrementation: %d\n", sh_mem);
+    sh_mem++;
+    cprintf("shared memory after incrementation: %d\n", sh_mem);
+    t_release(&t_ptable.tlk);
+
+    return sh_mem;
+}
+
+int
+_read(void)
+{
+    
 }

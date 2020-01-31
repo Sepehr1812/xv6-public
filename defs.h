@@ -12,6 +12,7 @@ struct superblock;
 
 // My project
 struct timeVariables;
+struct ticketlock;
 
 // bio.c
 void            binit(void);
@@ -129,6 +130,8 @@ int             getChildrenFunc(int);
 int             whichAlgo;
 void            updateTimes();
 int             waitForChild(struct timeVariables*);
+void            init_tlock(void);
+int             inc_sh_mem(void);
 
 // swtch.S
 void            swtch(struct context**, struct context*);
@@ -147,6 +150,13 @@ void            acquiresleep(struct sleeplock*);
 void            releasesleep(struct sleeplock*);
 int             holdingsleep(struct sleeplock*);
 void            initsleeplock(struct sleeplock*, char*);
+
+// My project
+// ticketlock.c
+void            t_initlock(struct ticketlock*, char*);
+void            t_acquire(struct ticketlock*);
+void            t_release(struct ticketlock*);
+int             t_holding(struct ticketlock*);
 
 // string.c
 int             memcmp(const void*, const void*, uint);

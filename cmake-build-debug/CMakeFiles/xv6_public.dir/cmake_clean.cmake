@@ -42,6 +42,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/xv6_public.dir/syscall.c.o"
   "CMakeFiles/xv6_public.dir/sysfile.c.o"
   "CMakeFiles/xv6_public.dir/sysproc.c.o"
+  "CMakeFiles/xv6_public.dir/ticketlock.c.o"
+  "CMakeFiles/xv6_public.dir/ticketlockTest.c.o"
   "CMakeFiles/xv6_public.dir/timeTest.c.o"
   "CMakeFiles/xv6_public.dir/trap.c.o"
   "CMakeFiles/xv6_public.dir/uart.c.o"

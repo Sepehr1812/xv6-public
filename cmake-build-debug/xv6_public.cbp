@@ -263,6 +263,15 @@
 		<Unit filename="/home/sepehr/Mine/xv6-public/sysproc.c">
 			<Option target="xv6_public"/>
 		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ticketlock.c">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ticketlock.h">
+			<Option target="xv6_public"/>
+		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/ticketlockTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
 		<Unit filename="/home/sepehr/Mine/xv6-public/timeTest.c">
 			<Option target="xv6_public"/>
 		</Unit>

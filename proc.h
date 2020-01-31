@@ -35,7 +35,7 @@ struct context {
 enum procstate { UNUSED, EMBRYO, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
 
 // My project
-#define MAX_SYS_CALLS 30
+#define MAX_SYS_CALLS 35
 
 // Per-process state
 struct proc {
