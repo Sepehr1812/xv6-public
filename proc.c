@@ -409,8 +409,6 @@ waitForChild(struct timeVariables *times)
 int whichAlgo = 0; // Initial algorithm
 #define NULL 0
 
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Wmissing-noreturn"
 void
 scheduler(void)
 {
@@ -496,8 +494,6 @@ scheduler(void)
     }
   }
 }
-//#pragma clang diagnostic pop
-//#pragma clang diagnostic pop
 
 // Enter scheduler.  Must hold only ptable.lock
 // and have changed proc->state. Saves and restores
@@ -728,6 +724,12 @@ struct {
 // the shared memory we created for testing ticket lock.
 int sh_mem;
 
+// ticket lock for writers
+struct ticketlock wlk;
+
+// readers counter
+int rc = 0;
+
 void
 init_tlock(void)
 {
@@ -739,16 +741,43 @@ int
 inc_sh_mem(void)
 {
     t_acquire(&t_ptable.tlk);
+
     cprintf("shared memory before incrementation: %d\n", sh_mem);
     sh_mem++;
     cprintf("shared memory after incrementation: %d\n", sh_mem);
+
     t_release(&t_ptable.tlk);
 
     return sh_mem;
 }
 
+// reader program for reader writer problem
 int
 _read(void)
 {
-    
+    t_acquire(&t_ptable.tlk);
+    rc++;
+    if (rc == 1)
+        t_acquire(&wlk);
+    t_release(&t_ptable.tlk);
+
+    int r = sh_mem; // reading; Critical Section
+
+    t_acquire(&t_ptable.tlk);
+    rc--;
+    if (rc == 0)
+        t_release(&wlk);
+    t_release(&t_ptable.tlk);
+
+    return r;
+}
+
+// writer program for reader writer problem
+void _write(void)
+{
+    t_acquire(&t_ptable.tlk);
+
+    sh_mem++; // writing; Critical Section
+
+    t_release(&t_ptable.tlk);
 }

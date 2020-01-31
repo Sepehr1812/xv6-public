@@ -39,6 +39,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/sepehr/Mine/xv6-public/printf.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/printf.c.o"
   "/home/sepehr/Mine/xv6-public/proc.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/proc.c.o"
   "/home/sepehr/Mine/xv6-public/rm.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/rm.c.o"
+  "/home/sepehr/Mine/xv6-public/rwTest.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/rwTest.c.o"
   "/home/sepehr/Mine/xv6-public/sh.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/sh.c.o"
   "/home/sepehr/Mine/xv6-public/sleeplock.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/sleeplock.c.o"
   "/home/sepehr/Mine/xv6-public/spinlock.c" "/home/sepehr/Mine/xv6-public/cmake-build-debug/CMakeFiles/xv6_public.dir/spinlock.c.o"

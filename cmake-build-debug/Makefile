@@ -1068,6 +1068,33 @@ rm.c.s:
 	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/rm.c.s
 .PHONY : rm.c.s
 
+rwTest.o: rwTest.c.o
+
+.PHONY : rwTest.o
+
+# target to build an object file
+rwTest.c.o:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/rwTest.c.o
+.PHONY : rwTest.c.o
+
+rwTest.i: rwTest.c.i
+
+.PHONY : rwTest.i
+
+# target to preprocess a source file
+rwTest.c.i:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/rwTest.c.i
+.PHONY : rwTest.c.i
+
+rwTest.s: rwTest.c.s
+
+.PHONY : rwTest.s
+
+# target to generate assembly for a file
+rwTest.c.s:
+	$(MAKE) -f CMakeFiles/xv6_public.dir/build.make CMakeFiles/xv6_public.dir/rwTest.c.s
+.PHONY : rwTest.c.s
+
 sh.o: sh.c.o
 
 .PHONY : sh.o
@@ -1695,6 +1722,9 @@ help:
 	@echo "... rm.o"
 	@echo "... rm.i"
 	@echo "... rm.s"
+	@echo "... rwTest.o"
+	@echo "... rwTest.i"
+	@echo "... rwTest.s"
 	@echo "... sh.o"
 	@echo "... sh.i"
 	@echo "... sh.s"

@@ -132,6 +132,8 @@ void            updateTimes();
 int             waitForChild(struct timeVariables*);
 void            init_tlock(void);
 int             inc_sh_mem(void);
+int             _read(void);
+void            _write(void);
 
 // swtch.S
 void            swtch(struct context**, struct context*);

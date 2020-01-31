@@ -79,4 +79,4 @@ add_executable(xv6_public
         vm.c
         wc.c
         x86.h
-        zombie.c ticketlock.c ticketlock.h ticketlockTest.c)
+        zombie.c ticketlock.c ticketlock.h ticketlockTest.c rwTest.c)

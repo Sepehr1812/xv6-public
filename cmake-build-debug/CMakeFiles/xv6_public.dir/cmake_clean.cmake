@@ -34,6 +34,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/xv6_public.dir/printf.c.o"
   "CMakeFiles/xv6_public.dir/proc.c.o"
   "CMakeFiles/xv6_public.dir/rm.c.o"
+  "CMakeFiles/xv6_public.dir/rwTest.c.o"
   "CMakeFiles/xv6_public.dir/sh.c.o"
   "CMakeFiles/xv6_public.dir/sleeplock.c.o"
   "CMakeFiles/xv6_public.dir/spinlock.c.o"

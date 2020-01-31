@@ -162,7 +162,7 @@ sys_ticketlockTest(void)
 void
 sys_rwinit(void)
 {
-
+    init_tlock();
 }
 
 int
@@ -171,4 +171,8 @@ sys_rwtest(void)
     int is_write;
     argint(0, (void*) &is_write);
 
+    if (is_write == 0)
+        return _read();
+    _write();
+    return -1;
 }

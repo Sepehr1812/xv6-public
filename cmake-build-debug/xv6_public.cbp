@@ -227,6 +227,9 @@
 		<Unit filename="/home/sepehr/Mine/xv6-public/rm.c">
 			<Option target="xv6_public"/>
 		</Unit>
+		<Unit filename="/home/sepehr/Mine/xv6-public/rwTest.c">
+			<Option target="xv6_public"/>
+		</Unit>
 		<Unit filename="/home/sepehr/Mine/xv6-public/sh.c">
 			<Option target="xv6_public"/>
 		</Unit>
