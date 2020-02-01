@@ -1,70 +1,64 @@
+// Test code for quantum modified Q 3.5.1
+
 #include "types.h"
 #include "user.h"
 
 struct timeVariables {
-    uint creationTime;
-    uint terminationTime;
-    uint sleepingTime;
-    uint readyTime;
-    uint runningTime;
-} times[1000];
+    int creationTime;
+    int terminationTime;
+    int sleepingTime;
+    int readyTime;
+    int runningTime;
+};
 
-int main(int argc, char const *argv[])
+int main(void)
 {
-    int i[1000000];
-    fork();
-    fork();
-    fork();
-    fork();
-    fork();
-    fork();
-    fork();
-    fork();
-    fork();
-    fork();
+    changePolicy(1);
 
-    for (i[getpid() % 1000] = 0; i[getpid() % 1000] < 1000; i[getpid() % 1000]++)
-        printf(1, "[%d]: [%d]\n", getpid(), i[getpid()] + 1);
+    int i = 0;
+    int j = 0;
+    int k = 0;
 
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    waitForChild(&times[getpid() % 1000]);
-    // printf(1, "times in order: %d, %d, %d, %d, %d\n", times[getpid() % 1000].creationTime,
-    //  times[getpid() % 1000].terminationTime,
-    //           times[getpid() % 1000].readyTime, times[getpid() % 1000].runningTime,
-    //            times[getpid() % 1000].sleepingTime);
+    struct timeVariables times[10];
+    for (j = 0; j < 10; j++)
+    {
+        if (fork() == 0)
+        {
+            for (i = 0; i < 1000; i++)
+                printf(1, "[%d]: [%d] \n", getpid(), i);
+            exit();
+        }
+    }
 
-    int tt = times[getpid() % 1000].terminationTime - times[getpid() % 1000].creationTime;
-    int cbt = times[getpid() % 1000].runningTime;
-    int wt = tt - cbt;
+    for (k = 0; k < 10; k++)
+        waitForChild(&times[k]);
 
-    printf(1, "[[%d]]: TT = %d, CBT = %d, WT = %d\n", getpid() % 1000, tt, cbt, wt);
+    int sumTurnaroundTime = 0;
+    int sumCBT = 0;
+    int sumWaitingTime = 0;
 
-    // printf(1, "\n\n\nTimes for children:\n\n");
-    // int j;
-    // int stt = 0;
-    // int scbt = 0;
-    // int swt = 0;
-    // for (j = 0; j < 1000; j++)    
-    // {
-    //     int tt = times[j].terminationTime - times[j].creationTime;
-    //     int cbt = times[j].runningTime;
-    //     int wt = tt - cbt;
-    //     stt += tt;
-    //     scbt += cbt;
-    //     swt += wt;
+    for (k = 0; k < 10; k++)
+    {
+        sumTurnaroundTime += (times[k].terminationTime - times[k].creationTime);
+        sumCBT += times[k].runningTime;
+        sumWaitingTime += times[k].readyTime;
+        printf(1, "Child number : %d \n", (k + 1));
+        printf(1, "Turnaround time : %d  \n", (times[k].terminationTime - times[k].creationTime));
+        printf(1, "CBT : %d  \n", times[k].runningTime);
+        printf(1, "Waiting time : %d  \n", times[k].readyTime);
+        printf(1, "\n");
+    }
 
-    //     printf(1, "[[%d]]: TT = %d, CBT = %d, WT = %d\n", j + 1, tt, cbt, wt);
-    // }
+    // calculating parameters
+    int childNumber = 10;
+    int avgTurnaroundTime = sumTurnaroundTime / childNumber;
+    int avgCBT = sumCBT / childNumber;
+    int avgWaitingTime = sumWaitingTime / childNumber;
 
-    // printf(1, "\n\n***********************************************ATT = %d, ACBT = %d, AWT = %d\n", stt / 1000.0, scbt / 1000.0, swt / 1000.0);
+    printf(1, "All Processes : \n");
+    printf(1, "Average Turnaround time : %d  \n", avgTurnaroundTime);
+    printf(1, "Average CBT : %d  \n", avgCBT);
+    printf(1, "Average Waiting time : %d  \n", avgWaitingTime);
 
     exit();
 }
