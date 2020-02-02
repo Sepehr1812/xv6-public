@@ -16,8 +16,8 @@ number of times the referenced system call was invoked by the calling process.
 * ```waitForChild``` system call added. It is the same ```wait``` system call plus measuring times will be explained below.
 
 **Ability to Measure Important Times**
-* This ability implemented by a struct contains below times:
-```creationTime, terminationTime, sleepingTime, readyTime, runningTime```
+* This ability implemented by a struct contains below times:  
+```creationTime, terminationTime, sleepingTime, readyTime, runningTime```  
 Struct fields have been added to each process.
 
 **Ticket Lock**
@@ -25,6 +25,6 @@ Struct fields have been added to each process.
 * implemetation of readers writers problem with ticket lock (uses a shared integer variable).
 
 
-! Numbers in my commit notes are numbers of questions in the project description.
-!! my changes to source codes are below ```// My project``` lines.
+! Numbers in my commit notes are numbers of questions in the project description.  
+!! my changes to source codes are below ```// My project``` lines.  
 !!! You can find the source code here: https://github.com/mit-pdos/xv6-public
